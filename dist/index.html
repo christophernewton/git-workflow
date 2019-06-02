@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<style>body {
+			font-family: 'Lato', sans-serif;
+		}
+		text {
+			font:10px !important;
+		}</style>
+</head>
+<body>
+	<h1>Default work flow</h1>
+	<h2>Branch from master with feature > do work > dev > staging > master</h2>
+  <div id="regularFlow"></div>
+	<ul>
+		<li>Create new branch from master called feature/new-navigation-menu</li>
+		<li>Commit work as you go</li>
+		<li>Once work is ready to show PM merge into dev</li>
+		<li>Once PM has approved merge into staging for client</li>
+		<li>Once Client has approved merge to master for production</li>
+	</ul>
+
+	<h1>Default work flow with PM change</h1>
+	<h2>Branch from master with feature > do work > dev > continue work on branch > staging > master</h2>
+	<div id="regularFlowPmChange"></div>
+	<ul>
+		<li>Create new branch from master called feature/new-navigation-menu</li>
+		<li>Commit work as you go</li>
+		<li>Once work is ready to show PM merge into dev</li>
+		<li>Once PM has approved merge into staging for client</li>
+		<li>Once Client has approved merge to master for production</li>
+	</ul>
+
+	<h1>Urgent hotfix</h1>
+	<small>Classified as "site down, needs immediate attentionto continue to run"</small>
+	<h2>Branch from master hotfix > fix issue > master</h2>
+	<div id="hotfixChange"></div>
+	<ul>
+		<li>Create new branch from master called hotfix/ie-11-bug</li>
+		<li>Solve issue, if it needs testing go to dev, otherwise deploy to master</li>
+		<li>If it needs testing go to dev, otherwise merge back to master</li>
+	</ul>
+  <!-- This is for ParcelJS bundler -->
+  <script src="/gitgraph.e31bb0bc.js"></script>
+</body>
+</html>
