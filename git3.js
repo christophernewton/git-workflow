@@ -40,15 +40,15 @@ staging.commit("Initial commit");
 const dev = gitgraph.branch("dev");
 dev.commit("Initial commit");
 
-const feature1 = gitgraph.branch("feature/new-navigation-menu");
+const feature1 = gitgraph.branch("feature/30000-new-navigation-menu");
 
 feature1
   .commit("created navigation")
   .commit("updated navigation js so that it works in IE11");
 
-const hotfix = master.branch("hotfix/ie-11-bug");
+const hotfix = master.branch("hotfix/30001-iis-webconfig-update");
 
-hotfix.commit("fixed grid compatibility issue in ie 11");
+hotfix.commit("fixed 500 error on server");
 
 master.merge(hotfix);
 

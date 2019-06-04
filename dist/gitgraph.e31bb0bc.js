@@ -2596,8 +2596,8 @@ var staging = gitgraph.branch("staging");
 staging.commit("Initial commit");
 var dev = gitgraph.branch("dev");
 dev.commit("Initial commit");
-var feature1 = gitgraph.branch("feature/new-navigation-menu");
-feature1.commit("created navigation").commit("updated navigation js so that it works in IE11").commit("added hover state color for desktop");
+var feature1 = gitgraph.branch("feature/30000-new-navigation-menu");
+feature1.commit("created navigation").commit("updated navigation js so that the hover works on mobile").commit("added hover state color for desktop");
 dev.merge(feature1);
 feature1.commit("PM noticed bug").commit("fixed an issue on mobile where button could not be clicked");
 dev.merge(feature1);
@@ -2644,10 +2644,10 @@ var staging = gitgraph.branch("staging");
 staging.commit("Initial commit");
 var dev = gitgraph.branch("dev");
 dev.commit("Initial commit");
-var feature1 = gitgraph.branch("feature/new-navigation-menu");
+var feature1 = gitgraph.branch("feature/30000-new-navigation-menu");
 feature1.commit("created navigation").commit("updated navigation js so that it works in IE11");
-var hotfix = master.branch("hotfix/ie-11-bug");
-hotfix.commit("fixed grid compatibility issue in ie 11");
+var hotfix = master.branch("hotfix/30001-iis-webconfig-update");
+hotfix.commit("fixed 500 error on server");
 master.merge(hotfix);
 feature1.commit("added hover state color for desktop");
 },{"@gitgraph/js":"node_modules/@gitgraph/js/lib/gitgraph.umd.js"}],"index.js":[function(require,module,exports) {
@@ -2695,8 +2695,8 @@ var staging = gitgraph.branch("staging");
 staging.commit("Initial commit");
 var dev = gitgraph.branch("dev");
 dev.commit("Initial commit");
-var feature1 = gitgraph.branch("feature/new-navigation-menu");
-feature1.commit("created navigation").commit("updated navigation js so that it works in IE11").commit("added hover state color for desktop");
+var feature1 = gitgraph.branch("feature/30000-new-navigation-menu");
+feature1.commit("created navigation").commit("updated navigation js so that the hover works on mobile").commit("added hover state color for desktop");
 dev.merge(feature1);
 staging.merge(dev);
 master.merge(staging);
@@ -2728,7 +2728,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51161" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52042" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

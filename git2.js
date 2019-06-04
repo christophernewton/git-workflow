@@ -40,10 +40,10 @@ staging.commit("Initial commit");
 const dev = gitgraph.branch("dev");
 dev.commit("Initial commit");
 
-const feature1 = gitgraph.branch("feature/new-navigation-menu");
+const feature1 = gitgraph.branch("feature/30000-new-navigation-menu");
 feature1
   .commit("created navigation")
-  .commit("updated navigation js so that it works in IE11")
+  .commit("updated navigation js so that the hover works on mobile")
   .commit("added hover state color for desktop");
 
 dev.merge(feature1);

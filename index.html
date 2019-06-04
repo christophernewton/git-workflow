@@ -12,37 +12,65 @@
 	</style>
 </head>
 <body>
-	<h1>Default work flow</h1>
-	<h2>Branch from master with feature > do work > dev > staging > master</h2>
+	<h1>Regular work flow</h1>
+	<p><strong>Request has been made to create a new navigation in the header of the site, this will be a new feautre</strong></p>
+	<p>master > (new branch) feature/new-navigation-menu > (merge) dev > (merge) staging > (merge) master</p>
   <div id="regularFlow"></div>
-	<ul>
+	<ol>
 		<li>Create new branch from master called feature/new-navigation-menu</li>
 		<li>Commit work as you go</li>
 		<li>Once work is ready to show PM merge into dev</li>
 		<li>Once PM has approved merge into staging for client</li>
 		<li>Once Client has approved merge to master for production</li>
-	</ul>
+	</ol>
 
-	<h1>Default work flow with PM change</h1>
-	<h2>Branch from master with feature > do work > dev > continue work on branch > staging > master</h2>
+	<h1>Regular work flow with PM change</h1>
+	<p><strong>The navigation doesnt work in ie 11, switch back to feature/new-navigation-menu and fix the issue, merge to dev for PM approval</strong></p>
+	<p>(change to) feature/new-navigation-menu > (merge) staging > (merge) master</p>
 	<div id="regularFlowPmChange"></div>
-	<ul>
-		<li>Create new branch from master called feature/new-navigation-menu</li>
-		<li>Commit work as you go</li>
+	<ol>
+		<li>Switch to feature/new-navigation-menu</li>
+		<li>Fix issue</li>
 		<li>Once work is ready to show PM merge into dev</li>
 		<li>Once PM has approved merge into staging for client</li>
 		<li>Once Client has approved merge to master for production</li>
-	</ul>
+	</ol>
 
 	<h1>Urgent hotfix</h1>
-	<small>Classified as "site down, needs immediate attentionto continue to run"</small>
-	<h2>Branch from master hotfix > fix issue > master</h2>
+	<p><strong>Classified as "site down, needs immediate attention to continue to run"</strong></p>
+	<p>master > (branch) hotfix/iis-webconfig-update</p>
 	<div id="hotfixChange"></div>
+	<ol>
+		<li>Create new branch from master called hotfix/iis-webconfig-update</li>
+		<li>Solve issue, if it needs testing go to dev, otherwise deploy direct to master</li>
+	</ol>
+
+	<h1>Branch naming strategy</h1>
+
+	<p><strong>feature/#ticketnumber</strong>: for new features or code additions</p>
+	<p><strong>hotfix/#ticketnumber</strong>: for urgent fixes required for production to continue to work</p>
+	<p><strong>chore/#ticketnumber</strong>: deprecation of code, refactoring or package updates</p>
+
+	<h1>Writing good commit messages</h1>
+	<p>What usually happens...</p>
+	<img src="https://i.imgur.com/RMNYZCN.png" alt="" style="width: 100%; height: auto;"/>
+
+	<p>#1 rule, give context for the code reviewer. Making a commit message saying "updated css file" gives no context at a high level to people reviewing code. "updated navigation with new hover effect" will allow a reviewer to track down code changes and debug easier.</p>
+
+	<h3>Examples of good commit messages</h3>
 	<ul>
-		<li>Create new branch from master called hotfix/ie-11-bug</li>
-		<li>Solve issue, if it needs testing go to dev, otherwise deploy to master</li>
-		<li>If it needs testing go to dev, otherwise merge back to master</li>
+		<li>added loading icon for contact and login form</li>
+		<li>updated packages in npm to fix security holes</li>
+		<li>removed deprecated code from cart api and cleaned up implementation</li>
 	</ul>
+	<p><strong>Why?</strong> descriptive, outline issue or feature in one sentance, direct</p>
+	<h3>Examples of bad commit messages</h3>
+	<ul>
+		<li>fixed issue</li>
+		<li>updated css files and minified js</li>
+		<li>dammit i hate ie</li>
+	</ul>
+	<p><strong>Why?</strong> opinionated, non descriptive, venting, reviewer has no idea what this commit does</p>
   <!-- This is for ParcelJS bundler -->
   <script src="./index.js"></script>
 </body>
