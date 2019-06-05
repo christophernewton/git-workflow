@@ -26,7 +26,7 @@
 
 	<h1>Regular work flow with PM change</h1>
 	<p><strong>The navigation doesnt work in ie 11, switch back to feature/new-navigation-menu and fix the issue, merge to dev for PM approval</strong></p>
-	<p>(change to) feature/new-navigation-menu > (merge) staging > (merge) master</p>
+	<p>(change to) feature/new-navigation-menu > (merge) dev > (merge) staging > (merge) master</p>
 	<div id="regularFlowPmChange"></div>
 	<ol>
 		<li>Switch to feature/new-navigation-menu</li>
@@ -38,7 +38,7 @@
 
 	<h1>Urgent hotfix</h1>
 	<p><strong>Classified as "site down, needs immediate attention to continue to run"</strong></p>
-	<p>master > (branch) hotfix/iis-webconfig-update</p>
+	<p>master > (branch) hotfix/iis-webconfig-update > (merge) master</p>
 	<div id="hotfixChange"></div>
 	<ol>
 		<li>Create new branch from master called hotfix/iis-webconfig-update</li>
