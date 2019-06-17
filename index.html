@@ -13,9 +13,9 @@
 </head>
 <body>
 	<h1>Regular work flow</h1>
-	<p><strong>Request has been made to create a new navigation in the header of the site, this will be a new feautre</strong></p>
+	<p><strong>Request has been made to create a new navigation in the header of the site, this will be a new feature</strong></p>
 	<p>master > (new branch) feature/new-navigation-menu > (merge) dev > (merge) staging > (merge) master</p>
-  <div id="regularFlow"></div>
+	<img src="https://i.imgur.com/MMVVOEn.png" />
 	<ol>
 		<li>Create new branch from master called feature/new-navigation-menu</li>
 		<li>Commit work as you go</li>
@@ -27,7 +27,8 @@
 	<h1>Regular work flow with PM change</h1>
 	<p><strong>The navigation doesnt work in ie 11, switch back to feature/new-navigation-menu and fix the issue, merge to dev for PM approval</strong></p>
 	<p>(change to) feature/new-navigation-menu > (merge) dev > (merge) staging > (merge) master</p>
-	<div id="regularFlowPmChange"></div>
+	<img src="https://i.imgur.com/FBM0ldW.png" />
+	
 	<ol>
 		<li>Switch to feature/new-navigation-menu</li>
 		<li>Fix issue</li>
@@ -39,7 +40,8 @@
 	<h1>Urgent hotfix</h1>
 	<p><strong>Classified as "site down, needs immediate attention to continue to run"</strong></p>
 	<p>master > (branch) hotfix/iis-webconfig-update > (merge) master</p>
-	<div id="hotfixChange"></div>
+	<img src="https://i.imgur.com/za4ISeN.png" />
+	
 	<ol>
 		<li>Create new branch from master called hotfix/iis-webconfig-update</li>
 		<li>Solve issue, if it needs testing go to dev, otherwise deploy direct to master</li>
@@ -71,7 +73,11 @@
 		<li>dammit i hate ie</li>
 	</ul>
 	<p><strong>Why?</strong> opinionated, non descriptive, venting, reviewer has no idea what this commit does</p>
-  <!-- This is for ParcelJS bundler -->
+	<!-- This is for ParcelJS bundler -->
+	<div id="regularFlow"></div>
+	<div id="regularFlowPmChange"></div>
+	<div id="hotfixChange"></div>
   <script src="./index.js"></script>
 </body>
 </html>
+
